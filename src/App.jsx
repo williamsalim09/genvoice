@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './screens/Login.jsx';
 import Homescreen from './screens/Homescreen.jsx';
 import Settings from './screens/Settings.jsx';
@@ -9,7 +9,7 @@ const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [username, setUsername] = useState('');
 
-  // handle login. only 1 kind of username, so no need to link directly to mirage
+  // handle login
   const handleLogin = (usernameInput) => {
     if (usernameInput === 'genvoice') {
       setIsAuthenticated(true);
@@ -26,7 +26,7 @@ const App = () => {
 
   // frontend
   return (
-    <Router basename="/genvoice">
+    <Router>
       <div className="items-center justify-center">
         <Routes>
           <Route 
