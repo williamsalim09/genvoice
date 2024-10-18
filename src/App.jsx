@@ -26,7 +26,7 @@ const App = () => {
 
   // frontend
   return (
-    <Router>
+    <Router basename="/genvoice">
       <div className="items-center justify-center">
         <Routes>
           <Route 
